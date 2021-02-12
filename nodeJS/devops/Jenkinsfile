@@ -16,7 +16,7 @@ pipeline {
         //make sure directory path is defined with preceeding slash
         pathDirectoryToClone = "/ui"  
 		gitCredentialKey = "git-credential"
-		gitRepoUrl = "github.com/vndube/angular-8-devops-demo.git"
+		gitRepoUrl = "github.com/ritsehga/angular-8-devops-demo.git"
 		
 		
 		sonar_project = "This_is_my_angular8_demo_project"  
@@ -37,8 +37,8 @@ pipeline {
 					dir(builddir) {
 					    sh 'git config --global credential.helper cache'
                         sh 'git config --global push.default simple'
-                        sh 'git config --global user.email "vndube@yahoo.com"'
-                        sh 'git config --global user.name "vndube"'
+                        sh 'git config --global user.email "ritsehga@gmail.com"'
+                        sh 'git config --global user.name "ritsehga"'
                         
                         
 						checkout([$class: 'GitSCM', 
